@@ -11,10 +11,7 @@ function UserForm() {
         <label htmlFor="email">Email:</label>
         <input type="email" name='email' id='email' placeholder='Digite seu e-mail' required/>
       </div>
-      <div className="form-control">
-        <label htmlFor="comentario">Comentário</label>
-        <textarea name="comentario" placeholder='Digite sua avaliação sobre o produto' required></textarea>
-      </div>
+      
     </div>
   )
 }
