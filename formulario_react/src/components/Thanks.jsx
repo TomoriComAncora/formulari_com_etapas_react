@@ -6,7 +6,7 @@ import {
 } from "react-icons/bs";
 import "./Thanks.css"
 
-function Thanks() {
+function Thanks({data}) {
   return (
     <div className="thanks-container">
       <h2>Falta pouco...</h2>

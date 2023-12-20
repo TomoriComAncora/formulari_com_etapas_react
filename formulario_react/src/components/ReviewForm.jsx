@@ -6,7 +6,7 @@ import {
 } from "react-icons/bs";
 import "./ReviewForm.css";
 
-function ReviewForm() {
+function ReviewForm({data, updateFieldHandler}) {
   return (
     <div className="review-form">
       <div className="form-control score-container">
