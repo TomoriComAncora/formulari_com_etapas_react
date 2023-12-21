@@ -6,27 +6,55 @@ import {
 } from "react-icons/bs";
 import "./ReviewForm.css";
 
-function ReviewForm({data, updateFieldHandler}) {
+function ReviewForm({ data, updateFieldHandler }) {
   return (
     <div className="review-form">
       <div className="form-control score-container">
         <label className="radio-container">
-          <input type="radio" value={"unsatisfied"} name="review" required />
+          <input
+            type="radio"
+            value={"unsatisfied"}
+            name="review"
+            required
+            checked={data.review === "unsatisfied"}
+            onChange={(e) => updateFieldHandler("review", e.target.value)}
+          />
           <BsFillEmojiFrownFill />
           <p>Insatisfeito</p>
         </label>
         <label className="radio-container">
-          <input type="radio" value={"neutral"} name="review" required />
+          <input
+            type="radio"
+            value={"neutral"}
+            name="review"
+            required
+            checked={data.review === "neutral"}
+            onChange={(e) => updateFieldHandler("review", e.target.value)}
+          />
           <BsFillEmojiNeutralFill />
           <p>Neutro</p>
         </label>
         <label className="radio-container">
-          <input type="radio" value={"satisfied"} name="review" required />
+          <input
+            type="radio"
+            value={"satisfied"}
+            name="review"
+            required
+            checked={data.review === "satisfied"}
+            onChange={(e) => updateFieldHandler("review", e.target.value)}
+          />
           <BsFillEmojiSmileFill />
           <p>Satisfeito</p>
         </label>
         <label className="radio-container">
-          <input type="radio" value={"very-satisfied"} name="review" required />
+          <input
+            type="radio"
+            value={"very-satisfied"}
+            name="review"
+            required
+            checked={data.review === "very-satisfied"}
+            onChange={(e) => updateFieldHandler("review", e.target.value)}
+          />
           <BsFillEmojiHeartEyesFill />
           <p>Muito satisfeito</p>
         </label>
@@ -38,6 +66,8 @@ function ReviewForm({data, updateFieldHandler}) {
           id="comment"
           placeholder="Digite sua avaliação sobre o produto"
           required
+          value={data.comment || ""}
+          onChange={(e)=> updateFieldHandler("comment", e.target.value)}
         ></textarea>
       </div>
     </div>
